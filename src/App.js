@@ -6,11 +6,13 @@ import ListarRecetas from "./components/ListarRecetas";
 //Contexts
 import CategoriasProvider from "./context/CategoriasContext";
 import RecetasProvider from "./context/RecetasContext";
-
+import ModalProvider from './context/ModalContext'
 function App() {
   return (
     <CategoriasProvider>
       <RecetasProvider>
+        <ModalProvider>
+          
         <Header />
         <div className="container mt-5">
           <div className="row">
@@ -18,6 +20,7 @@ function App() {
           </div>
           <ListarRecetas />
         </div>
+        </ModalProvider>
       </RecetasProvider>
     </CategoriasProvider>
   );
