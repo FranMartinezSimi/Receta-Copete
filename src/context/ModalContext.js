@@ -6,6 +6,7 @@ export const ModalContext = createContext();
 
 const ModalProvider = props => {
     const[ idReceta, guardarIdReceta ] = useState(null);
+    const [ informacionReceta, guardarReceta ] = useState({})
     
     useEffect(()=>{
         const obtenerRecetas = async () => {
@@ -14,7 +15,7 @@ const ModalProvider = props => {
             const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idReceta}
             `
             const resultado = await axios.get(url)
-            console.log(resultado.data.drinks[0])
+            guardarReceta(resultado.data.drinks[0])
         }
         obtenerRecetas()
     },[idReceta])
@@ -22,7 +23,9 @@ const ModalProvider = props => {
      return(
         <ModalContext.Provider
          value={{
-            guardarIdReceta
+            guardarIdReceta,
+            informacionReceta,
+            guardarReceta
          }}
         >
             {props.children}
