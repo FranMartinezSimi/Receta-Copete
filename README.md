@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Description!
+
+Creado utilizando Context y Hooks, tambien utiliza la api de CockTailDB, actualmente esta en lenguaje Ingles, para los estilos bootstrap4, sin embargo tambien utiliza MaterialUI para el modal
+
+### Librerias Externas utiilizadas
+MaterialUI, Bootstrap
